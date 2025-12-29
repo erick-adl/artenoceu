@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte no Céu | Filmagens e Fotografias Aéreas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0b;
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(10,10,11,0.9) 0%, rgba(30,58,138,0.5) 100%), 
+                        url('https://images.unsplash.com/photo-1473960154305-5afaac985694?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: #3b82f6;
+            transform: translateY(-5px);
+        }
+
+        .btn-glow {
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+        }
+        
+        .whatsapp-glow {
+            box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 bg-black/70 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0 font-black text-2xl tracking-tighter text-blue-500 italic">
+                    ARTE NO CÉU
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8 text-sm uppercase tracking-widest font-medium">
+                        <a href="#inicio" class="hover:text-blue-400 transition">Início</a>
+                        <a href="#servicos" class="hover:text-blue-400 transition">Serviços</a>
+                        <a href="#portfolio" class="hover:text-blue-400 transition">Portfólio</a>
+                        <a href="https://wa.me/5551991566635" target="_blank" class="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded text-white font-bold transition btn-glow">Contato</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="inicio" class="hero-gradient min-h-screen flex items-center justify-center pt-16">
+        <div class="text-center px-4 max-w-4xl">
+            <span class="text-blue-400 font-bold tracking-[0.3em] uppercase text-xs mb-4 block">Tecnologia Audiovisual</span>
+            <h1 class="text-5xl md:text-8xl font-black mb-6 leading-none tracking-tighter">
+                ARTE NO <span class="text-blue-500">CÉU</span>
+            </h1>
+            <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                Elevando o nível das suas imagens. Especialistas em captação cinematográfica com drones de alta performance para o Sul do Brasil.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#portfolio" class="border border-white/20 hover:bg-white/10 px-8 py-4 rounded font-bold transition uppercase text-sm tracking-widest">Ver Projetos</a>
+                <a href="https://wa.me/5551991566635" target="_blank" class="bg-green-500 hover:bg-green-600 px-8 py-4 rounded font-bold transition flex items-center justify-center gap-2 text-black whatsapp-glow">
+                    <i class="fab fa-whatsapp text-xl"></i> ORÇAMENTO RÁPIDO
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-24 px-4 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="glass-card p-8 rounded-lg">
+                <div class="w-12 h-12 bg-blue-500/20 flex items-center justify-center rounded-lg mb-6 border border-blue-500/30">
+                    <i class="fas fa-video text-blue-500"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4 uppercase tracking-tight">Filmagens 4K</h3>
+                <p class="text-gray-400 leading-relaxed">Captação em altíssima definição para casamentos, comerciais e eventos institucionais.</p>
+            </div>
+            <div class="glass-card p-8 rounded-lg">
+                <div class="w-12 h-12 bg-blue-500/20 flex items-center justify-center rounded-lg mb-6 border border-blue-500/30">
+                    <i class="fas fa-camera text-blue-500"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4 uppercase tracking-tight">Fotos HDR</h3>
+                <p class="text-gray-400 leading-relaxed">Fotografias aéreas nítidas e vibrantes, ideais para publicidade e acompanhamento de obras.</p>
+            </div>
+            <div class="glass-card p-8 rounded-lg">
+                <div class="w-12 h-12 bg-blue-500/20 flex items-center justify-center rounded-lg mb-6 border border-blue-500/30">
+                    <i class="fas fa-expand-arrows-alt text-blue-500"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-4 uppercase tracking-tight">Perspectiva Única</h3>
+                <p class="text-gray-400 leading-relaxed">Ângulos exclusivos que valorizam seu imóvel ou negócio por uma visão superior.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-24 bg-zinc-950 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-12">
+                <h2 class="text-3xl font-black uppercase tracking-tighter italic">Portfólio <span class="text-blue-500">Recente</span></h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="relative group overflow-hidden rounded-sm h-72 bg-zinc-800 border border-white/5">
+                    <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&q=80&w=800" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-700">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <p class="text-white font-bold tracking-widest border-b-2 border-blue-500">EVENTOS</p>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-sm h-72 bg-zinc-800 border border-white/5">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-700">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <p class="text-white font-bold tracking-widest border-b-2 border-blue-500">IMÓVEIS</p>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-sm h-72 bg-zinc-800 border border-white/5">
+                    <img src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&q=80&w=800" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-700">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <p class="text-white font-bold tracking-widest border-b-2 border-blue-500">TURISMO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 border-t border-white/5 bg-[#0a0a0b] px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-2xl md:text-4xl font-black mb-6 uppercase tracking-tighter leading-tight">Vamos decolar seu próximo projeto?</h2>
+            
+            <div class="mb-12 p-8 inline-block glass-card rounded-2xl border-blue-500/20">
+                <div class="flex items-center justify-center gap-3 text-blue-400 mb-3">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="font-bold tracking-[0.2em] uppercase text-xs">Onde estamos</span>
+                </div>
+                <p class="text-gray-300 max-w-md mx-auto leading-relaxed">
+                    Atendimento especializado na <strong>Região Metropolitana de Porto Alegre</strong>. 
+                    <br><span class="text-sm text-gray-500">Para demais cidades, consulte nossa disponibilidade e agenda.</span>
+                </p>
+            </div>
+
+            <br>
+
+            <a href="https://wa.me/5551991566635" target="_blank" class="inline-flex items-center gap-4 bg-green-500 text-black px-12 py-5 rounded font-black text-xl hover:bg-green-400 hover:scale-105 transition-all whatsapp-glow uppercase">
+                <i class="fab fa-whatsapp text-2xl"></i> Chamar no WhatsApp
+            </a>
+
+            <div class="mt-24 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-gray-600 text-[10px] tracking-widest uppercase">
+                <p>&copy; 2025 Arte no Céu - Gravataí/RS</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <span class="flex items-center gap-2"><i class="fas fa-shield-alt"></i> Registro ANAC</span>
+                    <span class="flex items-center gap-2"><i class="fas fa-user-check"></i> Pilotos Certificados</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
