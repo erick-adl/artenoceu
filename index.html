@@ -154,7 +154,7 @@
                     <div class="ml-10 flex items-baseline space-x-8 text-sm uppercase tracking-widest font-medium">
                         <a href="#inicio" class="hover:text-blue-400 transition">Início</a>
                         <a href="#servicos" class="hover:text-blue-400 transition">Serviços</a>
-                        <a href="#portfolio" class="hover:text-blue-400 transition">Portfólio</a>
+                        <a href="#portfolio" class="hover:text-blue-400 transition">Aplicações</a>
                         <a href="#faq" class="hover:text-blue-400 transition">FAQ</a>
                         <a href="https://wa.me/5551991566635?text=Olá! Gostaria de um orçamento para filmagem com drone."
                             onclick="gtag('event', 'click', {
@@ -233,22 +233,69 @@
         <div class="max-w-7xl mx-auto">
 
             <h2 class="text-3xl font-black uppercase tracking-tighter italic mb-12">
-                Portfólio <span class="text-blue-500">Recente</span>
+                Aplicações <span class="text-blue-500">com Drone</span>
             </h2>
+            <p class="text-gray-500 text-sm mb-8">
+                Imagens ilustrativas demonstrando possibilidades de aplicação do serviço.
+            </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&q=80&w=800"
-                    alt="Filmagem aérea com drone para eventos em Porto Alegre"
-                    class="h-72 w-full object-cover grayscale hover:grayscale-0 transition">
-                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800"
-                    alt="Fotografia aérea com drone para imóveis em Gravataí"
-                    class="h-72 w-full object-cover grayscale hover:grayscale-0 transition">
-                <img src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&q=80&w=800"
-                    alt="Imagem aérea com drone para turismo no Rio Grande do Sul"
-                    class="h-72 w-full object-cover grayscale hover:grayscale-0 transition">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- EVENTOS -->
+                <div class="relative group overflow-hidden rounded-sm bg-zinc-800 border border-white/5">
+                    <img src="assets/portfolio/evento-drone-porto-alegre.jpg"
+                        alt="Filmagem aérea com drone para eventos em Porto Alegre"
+                        class="object-cover w-full h-72 grayscale group-hover:grayscale-0 transition cursor-zoom-in"
+                        onclick="openLightbox(this.src)">
+
+                    <div
+                        class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex flex-col items-center justify-center p-4 text-center pointer-events-none">
+                        <i class="fas fa-search-plus text-white text-2xl mb-2"></i>
+                        <h3 class="font-bold text-white mb-2">Eventos</h3>
+                        <p class="text-gray-300 text-sm">
+                            Captação aérea com drone para eventos corporativos e sociais.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- IMÓVEIS -->
+                <div class="relative group overflow-hidden rounded-sm bg-zinc-800 border border-white/5">
+                    <img src="assets/portfolio/imovel-drone-gravatai.jpg"
+                        alt="Fotografia aérea com drone para imóveis em Gravataí"
+                        class="object-cover w-full h-72 grayscale group-hover:grayscale-0 transition cursor-zoom-in"
+                        onclick="openLightbox(this.src)">
+                    <div
+                        class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex flex-col items-center justify-center p-4 text-center pointer-events-none">
+                        <i class="fas fa-search-plus text-white text-2xl mb-2"></i>
+                        <h3 class="font-bold text-white mb-2">Imóveis</h3>
+                        <p class="text-gray-300 text-sm">
+                            Fotografia aérea profissional para valorização de imóveis.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- TURISMO -->
+                <div class="relative group overflow-hidden rounded-sm bg-zinc-800 border border-white/5">
+                    <img src="assets/portfolio/turismo-drone-rs.jpg"
+                        alt="Imagem aérea com drone para turismo no Rio Grande do Sul"
+                        class="object-cover w-full h-72 grayscale group-hover:grayscale-0 transition cursor-zoom-in"
+                        onclick="openLightbox(this.src)">
+                    <div
+                        class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition flex flex-col items-center justify-center p-4 text-center pointer-events-none">
+                        <i class="fas fa-search-plus text-white text-2xl mb-2"></i>
+                        <h3 class="font-bold text-white mb-2">Turismo</h3>
+                        <p class="text-gray-300 text-sm">
+                            Imagens aéreas para divulgação turística e projetos institucionais.
+                        </p>
+                    </div>
+                </div>
+
             </div>
+
         </div>
     </section>
+
     <section id="faq" class="py-24 px-4 bg-zinc-950">
         <div class="max-w-4xl mx-auto">
 
@@ -325,6 +372,27 @@
             </p>
         </div>
     </footer>
+    <div id="lightbox" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50"
+        onclick="closeLightbox()">
+
+        <img id="lightbox-img" class="max-w-[90%] max-h-[90%] object-contain cursor-zoom-out" src=""
+            alt="Visualização ampliada">
+    </div>
+    <script>
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.src = src;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+        }
+    </script>
 
 </body>
 
